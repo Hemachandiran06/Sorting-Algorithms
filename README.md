@@ -20,23 +20,42 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
+Unsorted=eval(input())
+def selsort(Unsorted):
+  n = len(Unsorted)
+  for i in range(n-1):
+    min_pos = i
+    for j in range(i,n):
+      if Unsorted[j]<Unsorted[min_pos]:
+        Unsorted[j],Unsorted[min_pos] = Unsorted[min_pos],Unsorted[j]
+  return Unsorted
+print(selsort(Unsorted))
 
 ```
 ii)	#Insertion Sort
 ```
 
-
-
-
-
+def Insertionsort(arr):
+  for i in range(1,len(arr)):
+    j = i
+    while arr[j]<arr[j-1] and j>0:
+      arr[j],arr[j-1] = arr[j-1], arr[j]
+      j-=1
+  return arr
+arr = eval(input())
+print(Insertionsort(arr))
 
 ```
 
 ## Output:
+i)	#Selection Sort
+![image](https://github.com/user-attachments/assets/726f34a2-e174-4f67-ab96-d8d33566ac0e)
+
+
+ii)	#Insertion Sort
+![image](https://github.com/user-attachments/assets/6ae7959b-ab6d-4f9d-a028-4d6557b4d990)
+
+
 
 
 ## Result:
